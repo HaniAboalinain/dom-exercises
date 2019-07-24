@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    
+    </script>
+    <title>Exercise #5: Input check</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        .err {
+            color: red;
+            font-size: 0.7em;
+        }
+    </style>
+    <script>
+        /* TODO complete this part */
+    </script>
+</head>
+<body>
+
+<form name="pw">
+    <table>
+        <tr>
+            <td>Password (min 6 characters):</td>
+
+            <td><input type="password" name="password1" id="password1" size="10" placeholder="Password"
+                onkeyup="chckPw1()"></td>
+            
+
+            <td>
+                <div id="pw1_check" class="err"></div>
+            </td>
+        
+
+        </tr>
+        
+
+        <tr>
+        
+            <td>Repeat password:</td>
+        
+
+            <td><input type="password" name="password2" id="password2" size="10" placeholder="Password" onkeyup="chckPw1()"></td>
+        
+
+            <td>
+                <div id="pw2_check" class="err"></div>
+            </td>
+        
+
+
+        </tr>
+    </table>
+
+    <input type="submit" value="Submit" id="submitBtn"/>
+
+
+</form>
+
+
+
+
+<script type="text/javascript">
+        
+                //Hide button by JQuery
+                $(document).ready(function() {
+                $("#submitBtn").hide();
+                });
+
+
+        function chckPw1() {
+            ps1 = document.getElementById('password1').value;
+            ck1 = document.getElementById("pw1_check");
+
+            ps2 = document.getElementById('password2').value;
+            ck2 = document.getElementById("pw2_check");
+
+           
+            if (ps1.length > 0) {
+                
+                if (ps1.length < 6) {
+                    ck1.innerHTML = "Too short !!";
+                  
+                }
+                else {
+                    ck1.innerHTML = "";
+                }
+                if (ps2.length > 0 && ps1 !== ps2) {
+                    ck2.innerHTML = "passwords dont match !!";
+                   
+                }
+                else {
+                    ck2.innerHTML = "";
+                }
+            }
+            
+
+
+        else {
+            ck1.innerHTML = "";
+        }
+
+
+//if passwords is match the button will display
+             btn = document.getElementById("submitBtn");
+
+            if (ps1.length > 0 && ps2.length > 0  && ps1 == ps2) {
+                btn.style.display = "";
+            }
+
+
+            else {
+                btn.style.display = "none";
+            }
+
+        }
+
+
+
+
+        
+
+
+
+</script>
+</body>
+</html>
+

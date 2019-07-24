@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<select id="flags" onchange="changeImg()"> No Image
+	
+<option value="no-image.png"> Select </option>
+<option value="Turkey.svg"> Turky </option>
+<option value="germany.png"> Germany</option>
+<option value="russia.png"> Russia</option>
+
+</select>
+<br>
+<br>
+<img id="img" src="no-image.png" width="300px" height="300px" border="5px solid black">
+
+
+
+
+
+<script type="text/javascript">
+
+	
+
+	function changeImg() {
+		
+		 source = document.getElementById("flags");
+         image = document.getElementById("img");
+         image.src = source.options[source.selectedIndex].value;
+         
+	}
+
+
+
+</script>
+
+
+</body>
+</html>

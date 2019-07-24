@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #1: Changing text</title>
+    <style>
+        #mydiv {
+            width: 300px;
+            height: 50px;
+            line-height: 50px;  /* for vertical alignment of text */
+            text-align: center;
+            border: 1px solid black;
+            background-color: yellow;
+            font-size: 2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div id="mydiv" onmouseover="hoverr()" onmouseout="outt()">Hello world</div>
+
+
+<script type="text/javascript">
+    
+    function hoverr(){
+        document.getElementById("mydiv").innerHTML="Can I Help You ?";
+
+    }
+
+    function outt(){
+        document.getElementById("mydiv").innerHTML="Hello world";
+
+    }
+
+
+</script>
+
+
+</body>
+</html>

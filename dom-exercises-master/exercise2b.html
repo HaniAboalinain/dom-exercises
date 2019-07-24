@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #2: Changing colors</title>
+    <style>
+        #mydiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        
+      
+      function changecolor() {
+    var colors = ["#B40404", "#0000FF", "#FE2E9A", "#FF0080", "#2EFE2E", ];
+    var rand = Math.floor(Math.random() * colors.length);
+   
+    document.getElementById('mydiv').style.background = colors[rand];
+
+        }
+
+    </script>
+</head>
+<body>
+<div id="mydiv" onclick="changecolor()"></div>
+</body>
+</html>
